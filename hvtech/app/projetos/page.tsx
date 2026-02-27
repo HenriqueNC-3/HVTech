@@ -2,20 +2,7 @@
 
 import { useState } from "react";
 
-interface Case {
-  title: string;
-  summary: string;
-}
-
-interface Service {
-  title: string;
-  description: string;
-  explanation: string;
-  averageTicket: string;
-  cases: Case[];
-}
-
-const services: Service[] = [
+const services = [
   {
     title: "Automação Industrial",
     description:
@@ -93,7 +80,7 @@ const services: Service[] = [
   },
 ];
 
-function ServiceBlock({ service }: { service: Service }) {
+function ServiceBlock({ service }) {
   const [current, setCurrent] = useState(0);
   const next = () => setCurrent((prev) => (prev + 1) % service.cases.length);
   const prev = () =>
