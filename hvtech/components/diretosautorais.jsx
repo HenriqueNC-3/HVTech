@@ -28,7 +28,7 @@ export default function Footer() {
           <div className="text-center md:text-right">
             <h4 className="text-lg font-semibold mb-4">Contato</h4>
             <p className="text-sm">Email: contato@hvtech.com</p>
-            <p className="text-sm">PTelefone: +55 (11) 99999-9999</p>
+            <p className="text-sm">Telefone: +55 (11) 99999-9999</p>
             <p className="text-sm">São Paulo, SP - Brasil</p>
           </div>
         </div>
