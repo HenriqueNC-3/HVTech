@@ -201,7 +201,7 @@ export default function Projects() {
 
       <section className="p-8">
         <div className="mb-16">
-          <h2 className="text-3xl font-semibold mb-6">Esses são os serviços no qual trabalhamos, com o objetivo de entregar soluções tecnológicas eficientes e inovadoras para nossos clientes, além disso mostramos os nossos melhores cases de sucesso no qual realizamos.</h2>
+          <h2 className="text-3xl font-semibold mb-6">Esses são os serviços no qual trabalhamos, com o objetivo de entregar soluções tecnológicas eficientes e inovadoras para nossos clientes, além disso mostramos os nossos melhores cases de sucesso.</h2>
           <div className="space-y-8">
             {services.map((s, i) => (
               <ServiceBlock key={i} service={s} />
