@@ -13,12 +13,20 @@ export default function Home() {
           height={200}
           className="mx-auto mb-6"
         />
-        <a
-          href="#"
-          className="inline-block bg-[#0B132B] text-white px-6 py-3 rounded-full hover:bg-[#1C2541] transition-colors duration-300"
-        >
-          Get Started
-        </a>
+        <div className="flex gap-4 justify-center">
+          <a
+            href="#"
+            className="inline-block bg-[#0B132B] text-white px-6 py-3 rounded-full hover:bg-[#1C2541] transition-colors duration-300"
+          >
+            Get Started
+          </a>
+          <a
+            href="/projetos"
+            className="inline-block bg-[#00B4D8] text-[#0B132B] px-6 py-3 rounded-full hover:opacity-90 transition-opacity duration-300 font-semibold"
+          >
+            Nossos Projetos
+          </a>
+        </div>
       </div>
     </div>
   );
