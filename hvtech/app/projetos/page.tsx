@@ -126,7 +126,7 @@ function ServiceBlock({ service }: { service: Service }) {
 
   return (
 <div className="bg-[#1C2541] p-8 rounded-lg shadow-lg">
-      <h3 className="text-2xl font-bold mb-2 text-center">{service.title}</h3>
+      <h3 className="text-3xl font-bold mb-2 text-center">{service.title}</h3>
       <div className="mb-4 flex justify-center">
         <img
           src={service.image}
@@ -134,10 +134,10 @@ function ServiceBlock({ service }: { service: Service }) {
           className="h-64 w-64 object-cover rounded-lg"
         />
       </div>
-      <p className="mb-1">{service.description}</p>
-      <p className="italic text-sm mb-1">Glossário:</p>
-      <p className="text-sm mb-2">{service.explanation}</p>
-      <p className="font-medium mb-4">
+      <p className="mb-1 text-lg">{service.description}</p>
+      <p className="italic text-base mb-1">Glossário:</p>
+      <p className="text-base mb-2">{service.explanation}</p>
+      <p className="font-medium text-lg mb-4">
         Ticket médio: {service.averageTicket}
       </p>
 
