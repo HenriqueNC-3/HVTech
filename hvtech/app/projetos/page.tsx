@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Footer from "@/components/diretosautorais";
 
 interface Case {
   title: string;
@@ -209,6 +210,7 @@ export default function Projects() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
