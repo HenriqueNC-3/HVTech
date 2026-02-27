@@ -3,10 +3,7 @@ import Footer from "@/components/diretosautorais";
 
 export default function Home() {
   return (
-    // 'flex-col' empilha o conteúdo e o footer verticalmente
     <div className="flex flex-col min-h-screen bg-[#0B132B] font-sans">
-      
-      {/* O 'flex-grow' faz esta parte ocupar todo o espaço sobrando, empurrando o footer para o fim */}
       <main className="flex-grow flex items-center justify-center p-4">
         <div className="text-center bg-white p-10 rounded-lg shadow-lg max-w-lg w-full">
           <h1 className="text-4xl font-bold mb-4 text-[#0B132B]">Welcome to HVTech</h1>
