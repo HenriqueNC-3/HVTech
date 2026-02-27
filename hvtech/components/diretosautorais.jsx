@@ -18,9 +18,9 @@ export default function Footer() {
           <div className="text-center">
             <h4 className="text-lg font-semibold mb-4">Serviços</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-[#00B4D8] transition">Automação Industrial</a></li>
-              <li><a href="#" className="hover:text-[#00B4D8] transition">Hardware</a></li>
-              <li><a href="#" className="hover:text-[#00B4D8] transition">Consultoria Técnica</a></li>
+              <li><a href="/projetos#automacao" className="hover:text-[#00B4D8] transition">Automação Industrial</a></li>
+              <li><a href="/projetos#hardware" className="hover:text-[#00B4D8] transition">Hardware</a></li>
+              <li><a href="/projetos#consultoria" className="hover:text-[#00B4D8] transition">Consultoria Técnica</a></li>
             </ul>
           </div>
 
