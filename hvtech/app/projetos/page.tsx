@@ -5,6 +5,7 @@ import Footer from "@/components/diretosautorais";
 
 interface Case {
   title: string;
+  client: string;
   summary: string;
   image: string;
 }
@@ -30,18 +31,21 @@ const services: Service[] = [
     cases: [
       {
         title: "Linha de Montagem Automática",
+        client: "Fábrica ABC",
         image: "/images (3).jpg",
         summary:
           "Implementamos um sistema de visão para separar peças defeituosas, reduzindo retrabalho em 40%.",
       },
       {
         title: "Sistema de Embalagem Inteligente",
+        client: "Embalagens Silva",
         image: "/images (4).jpg",
         summary:
           "Desenvolvemos controladores que ajustam a velocidade de embalo conforme tamanho do produto, aumentando a produtividade.",
       },
       {
         title: "Monitoramento de Falhas com SCADA",
+        client: "Metalúrgica Vale",
         image: "/images (5).jpg",
         summary:
           "Integramos sensores a um SCADA, que é um sistema de supervisão que permite visualizar e comandar processos à distância, para detectar falhas em tempo real e gerar alertas imediatos. ",
@@ -59,18 +63,21 @@ const services: Service[] = [
     cases: [
       {
         title: "Placa IoT para Monitoramento",
+        client: "AgroTech Ltda",
         image: "/images (6).jpg",
         summary:
           "Desenvolvemos um dispositivo que monitora temperatura e envia alertas via SMS para fazendas.",
       },
       {
         title: "Dispositivo USB Customizado",
+        client: "LabNet Engenharia",
         image: "/images (7).jpg",
         summary:
           "Criamos um dongle USB para coletar dados de sensores e replicar via rede para sistema central.",
       },
       {
         title: "Módulo Sensor de Umidade",
+        client: "AgroSol",
         image: "/images (8).jpg",
         summary:
           "Projetamos um módulo compacto que mede umidade e envia dados via LoRa, ou seja usando comunicação sem fio de baixo consumo, para aplicações agrícolas.",
@@ -88,18 +95,21 @@ const services: Service[] = [
     cases: [
       {
         title: "Treinamento de Operadores",
+        client: "Fábrica Brasil",
         image: "/images (9).jpg",
         summary:
           "Capacitamos 50 colaboradores em operação de novos CLPs, agilizando a integração de uma nova linha.",
       },
       {
         title: "Análise de Torque em Máquina",
+        client: "AutoMotores",
         image: "/images (10).jpg",
         summary:
           "Realizamos auditoria de torque e calibramos equipamentos para reduzir quebras de ferramentas.",
       },
       {
         title: "Suporte 24/7 para Sistema de Controle",
+        client: "Distribuidora XYZ",
         image: "/images (5).jpg",
         summary:
           "Oferecemos atendimento contínuo e correções remotas que diminuíram o tempo médio de resposta em 60%.",
@@ -115,19 +125,19 @@ function ServiceBlock({ service }: { service: Service }) {
     setCurrent((prev) => (prev - 1 + service.cases.length) % service.cases.length);
 
   return (
-    <div className="bg-[#1C2541] p-8 rounded-lg shadow-lg">
+<div className="bg-[#1C2541] p-8 rounded-lg shadow-lg">
       <h3 className="text-2xl font-bold mb-2 text-center">{service.title}</h3>
       <div className="mb-4 flex justify-center">
         <img
           src={service.image}
           alt={service.title}
-          className="h-48 w-48 object-cover rounded-lg"
+          className="h-64 w-64 object-cover rounded-lg"
         />
       </div>
-      <p className="mb-1 text-center">{service.description}</p>
-      <p className="italic text-sm mb-1 text-center">Glossário:</p>
-      <p className="text-sm mb-2 text-center">{service.explanation}</p>
-      <p className="font-medium mb-4 text-center">
+      <p className="mb-1">{service.description}</p>
+      <p className="italic text-sm mb-1">Glossário:</p>
+      <p className="text-sm mb-2">{service.explanation}</p>
+      <p className="font-medium mb-4">
         Ticket médio: {service.averageTicket}
       </p>
 
@@ -139,12 +149,15 @@ function ServiceBlock({ service }: { service: Service }) {
               <img
                 src={service.cases[current].image}
                 alt={service.cases[current].title}
-                className="h-40 w-40 object-cover rounded-lg"
+                className="h-56 w-56 object-cover rounded-lg"
               />
             </div>
             <h5 className="text-2xl font-bold mb-2 text-center">
               {service.cases[current].title}
             </h5>
+            <p className="text-sm italic mb-1 text-center text-gray-300">
+              Cliente: {service.cases[current].client}
+            </p>
             <p className="text-center">{service.cases[current].summary}</p>
           </div>
 
@@ -202,7 +215,8 @@ export default function Projects() {
 
       <section className="p-8">
         <div className="mb-16">
-          <h2 className="text-3xl font-semibold mb-6">Esses são os serviços no qual trabalhamos, com o objetivo de entregar soluções tecnológicas eficientes e inovadoras para nossos clientes, além disso mostramos os nossos melhores cases de sucesso.</h2>
+          <h2 className="text-3xl font-semibold mb-6">Esses são os serviços no qual trabalhamos, com o objetivo de entregar soluções tecnológicas eficientes.</h2>
+          <p className="text-lg mb-8">Na HV Tech, oferecemos projetos personalizados que unem experiência técnica e inovação, sempre garantindo qualidade e eficiência pelo menor preço. Abaixo você encontra um resumo dos nossos principais serviços e alguns de nossos melhores cases de sucesso.</p>
           <div className="space-y-8">
             {services.map((s, i) => {
               const sectionIds = ["automacao", "hardware", "consultoria"];
