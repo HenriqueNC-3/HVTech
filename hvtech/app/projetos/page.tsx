@@ -138,7 +138,7 @@ function ServiceBlock({ service }: { service: Service }) {
         <img
           src={service.image}
           alt={service.title}
-          className="h-32 w-full max-w-[150px] rounded-lg object-cover sm:h-48 sm:max-w-xs md:h-64 md:max-w-sm"
+          className="h-20 w-full max-w-[100px] rounded-lg object-cover sm:h-24 sm:max-w-[120px] md:h-32 md:max-w-[150px]"
         />
       </div>
       <p className="mb-1 text-sm sm:text-base">{service.description}</p>
