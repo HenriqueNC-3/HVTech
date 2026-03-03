@@ -119,57 +119,68 @@ const services: Service[] = [
 ];
 
 function ServiceBlock({ service }: { service: Service }) {
-  const [current, setCurrent] = useState(0);
-  const next = () => setCurrent((prev) => (prev + 1) % service.cases.length);
-  const prev = () =>
-    setCurrent((prev) => (prev - 1 + service.cases.length) % service.cases.length);
+  const [current, setCurrent] = useState<number>(0);
+  const next = () => {
+    const nextIndex = (current + 1) % service.cases.length;
+    setCurrent(nextIndex);
+  };
+  const prev = () => {
+    const prevIndex = (current - 1 + service.cases.length) % service.cases.length;
+    setCurrent(prevIndex);
+  };
 
   return (
-<div className="bg-[#1C2541] p-8 rounded-lg shadow-lg">
-      <h3 className="text-3xl font-bold mb-2 text-center">{service.title}</h3>
+    <div className="rounded-lg bg-[#1C2541] p-4 shadow-lg sm:p-6 lg:p-8">
+      <h3 className="mb-2 text-center text-2xl font-bold sm:text-3xl">
+        {service.title}
+      </h3>
       <div className="mb-4 flex justify-center">
         <img
           src={service.image}
           alt={service.title}
-          className="h-64 w-64 object-cover rounded-lg"
+          className="h-56 w-full max-w-xs rounded-lg object-cover sm:h-64 sm:max-w-sm"
         />
       </div>
-      <p className="mb-1 text-lg">{service.description}</p>
-      <p className="italic text-base mb-1">Glossário:</p>
-      <p className="text-base mb-2">{service.explanation}</p>
-      <p className="font-medium text-lg mb-4">
+      <p className="mb-1 text-sm sm:text-base">{service.description}</p>
+      <p className="mb-1 text-sm italic sm:text-base">Glossário:</p>
+      <p className="mb-2 text-sm sm:text-base">{service.explanation}</p>
+      <p className="mb-4 text-lg font-medium">
         Ticket médio: {service.averageTicket}
       </p>
 
       <div>
-        <h4 className="text-xl font-semibold mb-2 text-center">Cases de Sucesso</h4>
-        <div className="relative max-w-md mx-auto">
-          <div className="bg-[#0B132B] p-6 rounded-lg">
+        <h4 className="mb-2 text-center text-lg font-semibold sm:text-xl">
+          Cases de Sucesso
+        </h4>
+        <div className="relative mx-auto max-w-md">
+          <div className="rounded-lg bg-[#0B132B] p-4 sm:p-6">
             <div className="mb-4 flex justify-center">
               <img
                 src={service.cases[current].image}
                 alt={service.cases[current].title}
-                className="h-56 w-56 object-cover rounded-lg"
+                className="h-48 w-full max-w-xs rounded-lg object-cover sm:h-56 sm:max-w-sm"
               />
             </div>
-            <h5 className="text-2xl font-bold mb-2 text-center">
+            <h5 className="mb-2 text-center text-xl font-bold sm:text-2xl">
               {service.cases[current].title}
             </h5>
-            <p className="text-sm italic mb-1 text-center text-gray-300">
+            <p className="mb-1 text-center text-xs italic text-gray-300 sm:text-sm">
               Cliente: {service.cases[current].client}
             </p>
-            <p className="text-center">{service.cases[current].summary}</p>
+            <p className="text-center text-sm sm:text-base">
+              {service.cases[current].summary}
+            </p>
           </div>
 
           <button
             onClick={prev}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#00B4D8] text-[#0B132B] p-2 rounded-full hover:opacity-90"
+            className="absolute left-0 top-1/2 -translate-y-1/2 transform rounded-full bg-[#00B4D8] p-2 text-[#0B132B] hover:opacity-90"
           >
             ‹
           </button>
           <button
             onClick={next}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-[#00B4D8] text-[#0B132B] p-2 rounded-full hover:opacity-90"
+            className="absolute right-0 top-1/2 -translate-y-1/2 transform rounded-full bg-[#00B4D8] p-2 text-[#0B132B] hover:opacity-90"
           >
             ›
           </button>
@@ -197,7 +208,7 @@ export default function Projects() {
       `}</style>
 
       <div
-        className="relative h-96 w-full overflow-hidden mb-12"
+        className="relative mb-10 h-64 w-full overflow-hidden sm:h-80 md:h-96"
         style={{
           backgroundImage: `linear-gradient(rgba(11, 19, 43, 0.75), rgba(11, 19, 43, 0.75)), url('/thumb_projetos.jpg')`,
           backgroundSize: "cover",
@@ -206,17 +217,25 @@ export default function Projects() {
         }}
       >
         <div className="header-background absolute inset-0 bg-cover bg-center" />
-        <div className="relative flex items-center justify-center h-full">
-          <h1 className="text-6xl font-bold text-center text-[#E0E1DD] drop-shadow-lg">
+        <div className="relative flex h-full items-center justify-center px-4">
+          <h1 className="text-3xl font-bold text-center text-[#E0E1DD] drop-shadow-lg sm:text-4xl md:text-5xl lg:text-6xl">
             Nossos serviços
           </h1>
         </div>
       </div>
 
-      <section className="p-8">
-        <div className="mb-16">
-          <h2 className="text-3xl font-semibold mb-6">Esses são os serviços no qual trabalhamos, com o objetivo de entregar soluções tecnológicas eficientes.</h2>
-          <p className="text-lg mb-8">Na HV Tech, oferecemos projetos personalizados que unem experiência técnica e inovação, sempre garantindo qualidade e eficiência pelo menor preço. Abaixo você encontra um resumo dos nossos principais serviços e alguns de nossos melhores cases de sucesso.</p>
+      <section className="px-4 py-8 sm:px-6 md:px-8">
+        <div className="mb-12">
+          <h2 className="mb-4 text-2xl font-semibold sm:text-3xl">
+            Esses são os serviços no qual trabalhamos, com o objetivo de entregar
+            soluções tecnológicas eficientes.
+          </h2>
+          <p className="mb-8 text-sm leading-relaxed sm:text-base md:text-lg">
+            Na HV Tech, oferecemos projetos personalizados que unem experiência
+            técnica e inovação, sempre garantindo qualidade e eficiência pelo
+            menor preço. Abaixo você encontra um resumo dos nossos principais
+            serviços e alguns de nossos melhores cases de sucesso.
+          </p>
           <div className="space-y-8">
             {services.map((s, i) => {
               const sectionIds = ["automacao", "hardware", "consultoria"];
