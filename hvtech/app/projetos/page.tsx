@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Footer from "@/components/diretosautorais";
 
+
 interface Case {
   title: string;
   client: string;
@@ -12,8 +13,8 @@ interface Case {
 
 interface Service {
   title: string;
-  description: string;
-  explanation: string;
+  description: string; // description now includes any glossary/explanation inline
+  explanation?: string; // kept optional for legacy but generally unused
   averageTicket: string;
   image: string;
   cases: Case[];
@@ -24,9 +25,8 @@ const services: Service[] = [
     title: "Automação Industrial",
     image: "/automacao.jpg",
     description:
-      "Projetos para tornar fábricas e linhas de produção mais eficientes através de sensores, controladores lógicos programáveis (CLPs) e sistemas supervisórios.",
-    explanation:
-      "CLP (Controlador Lógico Programável) é um computador industrial que controla máquinas; sistemas supervisórios (SCADA) permitem visualizar e comandar processos à distância.",
+      "Projetos para tornar fábricas e linhas de produção mais eficientes por meio da instalação de sensores que coletam dados em tempo real, controladores lógicos programáveis (CLPs) — computadores industriais que comandam a sequência de máquinas — e sistemas supervisórios (SCADA), que permitem monitorar e controlar processos remotamente. Atuamos desde a modelagem de fluxos até a programação e integração com ERP, reduzindo erros e paradas não planejadas.",
+    explanation: "",
     averageTicket: "R$ 75.000",
     cases: [
       {
@@ -56,9 +56,8 @@ const services: Service[] = [
     title: "Desenvolvimento de Hardware",
     image: "/hardware.jpg",
     description:
-      "Criação de placas eletrônicas e dispositivos customizados voltados para Internet das Coisas (IoT) e equipamentos embarcados.",
-    explanation:
-      "IoT (Internet das Coisas) refere‑se a objetos conectados à internet que trocam dados; 'embarcado' significa que o software roda diretamente no dispositivo, sem um sistema operacional de uso geral.",
+      "Criação de placas eletrônicas e dispositivos customizados voltados para Internet das Coisas (IoT) — redes de objetos conectados que trocam dados — e equipamentos embarcados, onde o software roda diretamente no circuito sem um sistema operacional convencional. Projetamos desde o esquemático até a fabricação de protótipos, incluindo desenvolvimento de firmware, certificação e produção em série.",
+    explanation: "",
     averageTicket: "R$ 45.000",
     cases: [
       {
@@ -88,9 +87,8 @@ const services: Service[] = [
     title: "Consultoria e Suporte Técnico",
     image: "/consultoria.jpg",
     description:
-      "Análise de instalações, treinamento de equipes e atendimento remoto ou in‑loco para minimizar tempos de parada.",
-    explanation:
-      "Tempo de parada é o período em que uma máquina fica parada por falha ou manutenção; suporte 'in‑loco' significa atendimento presencial.",
+      "Análise detalhada de instalações existentes, treinamento de equipes para operação e manutenção, e atendimento remoto ou in‑loco para minimizar tempos de parada — os períodos em que máquinas ficam inoperantes devido a falhas ou manutenção. Nosso suporte in‑loco garante presença física rápida quando necessário, complementado por diagnósticos remotos e planos de contingência.",
+    explanation: "",
     averageTicket: "R$ 12.000",
     cases: [
       {
@@ -141,9 +139,7 @@ function ServiceBlock({ service }: { service: Service }) {
           className="h-48 w-48 rounded-lg object-cover sm:h-56 sm:w-56 md:h-72 md:w-72"
         />
       </div>
-      <p className="mb-1 text-sm sm:text-base">{service.description}</p>
-      <p className="mb-1 text-sm italic sm:text-base">Glossário:</p>
-      <p className="mb-2 text-sm sm:text-base">{service.explanation}</p>
+      <p className="mb-2 text-sm sm:text-base">{service.description}</p>
       <p className="mb-4 text-lg font-medium">
         Ticket médio: {service.averageTicket}
       </p>

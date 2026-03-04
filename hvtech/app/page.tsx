@@ -93,10 +93,10 @@ export default function Home() {
                 <AnimatedSection delay={0.1}>
                   <div className="flex flex-col rounded-xl bg-white/5 p-6 transition-all duration-300 hover:bg-white/8 hover:scale-[1.02]">
                     <h3 className="text-lg font-semibold text-[#00B4D8]">
-                      Plataformas Digitais
+                      Automação Industrial
                     </h3>
                     <p className="mt-3 text-sm leading-relaxed text-[#E0E1DD]">
-                      Desenvolvemos aplicações web e mobile escaláveis, seguras e com excelente experiência do usuário.
+                      Desenvolvemos soluções de automação para otimizar processos industriais, aumentando eficiência e reduzindo custos operacionais.
                     </p>
                   </div>
                 </AnimatedSection>
@@ -104,10 +104,10 @@ export default function Home() {
                 <AnimatedSection delay={0.2}>
                   <div className="flex flex-col rounded-xl bg-white/5 p-6 transition-all duration-300 hover:bg-white/8 hover:scale-[1.02]">
                     <h3 className="text-lg font-semibold text-[#00B4D8]">
-                      APIs e Integrações
+                      Desenvolvimento de Hardware
                     </h3>
                     <p className="mt-3 text-sm leading-relaxed text-[#E0E1DD]">
-                      Criamos APIs robustas e integramos sistemas heterogêneos para uma comunicação fluida entre plataformas.
+                      Projetamos e fabricamos hardware personalizado para atender às necessidades específicas de cada cliente, garantindo integração perfeita com software.
                     </p>
                   </div>
                 </AnimatedSection>
@@ -115,43 +115,10 @@ export default function Home() {
                 <AnimatedSection delay={0.3}>
                   <div className="flex flex-col rounded-xl bg-white/5 p-6 transition-all duration-300 hover:bg-white/8 hover:scale-[1.02]">
                     <h3 className="text-lg font-semibold text-[#00B4D8]">
-                      Infraestrutura e DevOps
+                      Consultoria e Suporte Técnico
                     </h3>
                     <p className="mt-3 text-sm leading-relaxed text-[#E0E1DD]">
-                      Estruturamos ambientes cloud, automação, observabilidade e CI/CD para máxima confiabilidade.
-                    </p>
-                  </div>
-                </AnimatedSection>
-
-                <AnimatedSection delay={0.4}>
-                  <div className="flex flex-col rounded-xl bg-white/5 p-6 transition-all duration-300 hover:bg-white/8 hover:scale-[1.02]">
-                    <h3 className="text-lg font-semibold text-[#00B4D8]">
-                      Modernização de Legado
-                    </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-[#E0E1DD]">
-                      Transformamos sistemas antigos em arquiteturas modernas, mantendo continuidade operacional.
-                    </p>
-                  </div>
-                </AnimatedSection>
-
-                <AnimatedSection delay={0.5}>
-                  <div className="flex flex-col rounded-xl bg-white/5 p-6 transition-all duration-300 hover:bg-white/8 hover:scale-[1.02]">
-                    <h3 className="text-lg font-semibold text-[#00B4D8]">
-                      Automação
-                    </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-[#E0E1DD]">
-                      Eliminamos processos manuais repetitivos através de robótica e automação inteligente.
-                    </p>
-                  </div>
-                </AnimatedSection>
-
-                <AnimatedSection delay={0.6}>
-                  <div className="flex flex-col rounded-xl bg-white/5 p-6 transition-all duration-300 hover:bg-white/8 hover:scale-[1.02]">
-                    <h3 className="text-lg font-semibold text-[#00B4D8]">
-                      Consultoria Técnica
-                    </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-[#E0E1DD]">
-                      Orientamos times na escolha de tecnologias e arquiteturas mais adequadas para seus objetivos.
+                      Oferecemos consultoria especializada para ajudar sua empresa a escolher as melhores soluções tecnológicas e garantir suporte técnico eficiente.
                     </p>
                   </div>
                 </AnimatedSection>
