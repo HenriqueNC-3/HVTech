@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Footer from "@/components/diretosautorais";
 import Hero from "@/components/Hero";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -31,8 +32,10 @@ export default function Home() {
             </p>
             <p className="mt-3 text-base leading-relaxed text-[#E0E1DD] sm:text-lg">
               Atuamos desde a concepção de produtos digitais até a sustentação
-              de ambientes críticos, passando por automação, observabilidade,
-              integrações e modernização de sistemas legados. Cada projeto é
+              de ambientes críticos, passando por automação industrial (otimização
+              de fábricas e linhas de produção), desenvolvimento de hardware
+              customizado para IoT e equipamentos embarcados, e consultoria técnica
+              para minimizar paradas não planejadas. Cada projeto é
               tratado como uma parceria de longo prazo: crescemos junto com o
               cliente, ajustando a tecnologia ao momento do negócio.
             </p>
@@ -43,8 +46,8 @@ export default function Home() {
                   O que entregamos
                 </p>
                 <p className="mt-2 text-sm text-[#E0E1DD]">
-                  Plataformas digitais, APIs, integrações e soluções sob medida
-                  para cada realidade.
+                  Plataformas digitais, integrações, soluções de automação
+                  de hardware e consultoria técnica sob medida para cada realidade.
                 </p>
               </div>
               </AnimatedSection>
@@ -55,7 +58,7 @@ export default function Home() {
                 </p>
                 <p className="mt-2 text-sm text-[#E0E1DD]">
                   Arquiteturas seguras, escaláveis e observáveis, com foco em
-                  simplicidade e clareza.
+                  simplicidade, clareza e integração total entre sistemas.
                 </p>
               </div>
               </AnimatedSection>
@@ -65,8 +68,8 @@ export default function Home() {
                   Para quem fazemos
                 </p>
                 <p className="mt-2 text-sm text-[#E0E1DD]">
-                  Times que precisam de confiança na infraestrutura para poder
-                  inovar com velocidade.
+                  Empresas que dependem de confiança na infraestrutura e operação
+                  para inovar com velocidade e reduzir riscos operacionais.
                 </p>
               </div>
               </AnimatedSection>
@@ -91,36 +94,42 @@ export default function Home() {
               
               <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 <AnimatedSection delay={0.1}>
-                  <div className="flex flex-col rounded-xl bg-white/5 p-6 transition-all duration-300 hover:bg-white/8 hover:scale-[1.02]">
-                    <h3 className="text-lg font-semibold text-[#00B4D8]">
-                      Automação Industrial
-                    </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-[#E0E1DD]">
-                      Desenvolvemos soluções de automação para otimizar processos industriais, aumentando eficiência e reduzindo custos operacionais.
-                    </p>
-                  </div>
+                  <Link href="/projetos#automacao">
+                    <div className="flex flex-col rounded-xl bg-white/5 p-6 transition-all duration-300 hover:bg-white/8 hover:scale-[1.02] cursor-pointer h-full">
+                      <h3 className="text-lg font-semibold text-[#00B4D8]">
+                        Automação Industrial
+                      </h3>
+                      <p className="mt-3 text-sm leading-relaxed text-[#E0E1DD]">
+                        Otimizamos fábricas e linhas de produção com sensores, controladores e sistemas supervisórios para aumentar eficiência e reduzir paradas não planejadas.
+                      </p>
+                    </div>
+                  </Link>
                 </AnimatedSection>
 
                 <AnimatedSection delay={0.2}>
-                  <div className="flex flex-col rounded-xl bg-white/5 p-6 transition-all duration-300 hover:bg-white/8 hover:scale-[1.02]">
-                    <h3 className="text-lg font-semibold text-[#00B4D8]">
-                      Desenvolvimento de Hardware
-                    </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-[#E0E1DD]">
-                      Projetamos e fabricamos hardware personalizado para atender às necessidades específicas de cada cliente, garantindo integração perfeita com software.
-                    </p>
-                  </div>
+                  <Link href="/projetos#hardware">
+                    <div className="flex flex-col rounded-xl bg-white/5 p-6 transition-all duration-300 hover:bg-white/8 hover:scale-[1.02] cursor-pointer h-full">
+                      <h3 className="text-lg font-semibold text-[#00B4D8]">
+                        Desenvolvimento de Hardware
+                      </h3>
+                      <p className="mt-3 text-sm leading-relaxed text-[#E0E1DD]">
+                        Projetamos e fabricamos dispositivos customizados para IoT e equipamentos embarcados, do esquemático à produção em série.
+                      </p>
+                    </div>
+                  </Link>
                 </AnimatedSection>
 
                 <AnimatedSection delay={0.3}>
-                  <div className="flex flex-col rounded-xl bg-white/5 p-6 transition-all duration-300 hover:bg-white/8 hover:scale-[1.02]">
-                    <h3 className="text-lg font-semibold text-[#00B4D8]">
-                      Consultoria e Suporte Técnico
-                    </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-[#E0E1DD]">
-                      Oferecemos consultoria especializada para ajudar sua empresa a escolher as melhores soluções tecnológicas e garantir suporte técnico eficiente.
-                    </p>
-                  </div>
+                  <Link href="/projetos#consultoria">
+                    <div className="flex flex-col rounded-xl bg-white/5 p-6 transition-all duration-300 hover:bg-white/8 hover:scale-[1.02] cursor-pointer h-full">
+                      <h3 className="text-lg font-semibold text-[#00B4D8]">
+                        Consultoria e Suporte Técnico
+                      </h3>
+                      <p className="mt-3 text-sm leading-relaxed text-[#E0E1DD]">
+                        Analisamos instalações, treinamos equipes e oferecemos suporte remoto e presencial para minimizar tempos de parada.
+                      </p>
+                    </div>
+                  </Link>
                 </AnimatedSection>
               </div>
             </AnimatedSection>

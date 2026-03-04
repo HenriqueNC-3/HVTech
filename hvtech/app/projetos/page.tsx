@@ -96,7 +96,7 @@ const services: Service[] = [
         client: "Fábrica Brasil",
         image: "/images (9).jpg",
         summary:
-          "Capacitamos 50 colaboradores em operação de novos CLPs, agilizando a integração de uma nova linha.",
+          "Capacitamos 50 colaboradores em operação de novos CLPs (Controladores Lógicos Programáveis), agilizando a integração de uma nova linha.",
       },
       {
         title: "Análise de Torque em Máquina",
