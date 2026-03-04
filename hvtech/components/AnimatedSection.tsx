@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useInView } from "motion/react";
-import { useRef } from "react";
+import { motion } from "motion/react";
 
 interface AnimatedSectionProps {
   children: React.ReactNode;
@@ -16,9 +15,6 @@ export default function AnimatedSection({
   delay = 0,
   direction = "up",
 }: AnimatedSectionProps) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
-
   const directions = {
     up: { y: 24, x: 0 },
     down: { y: -24, x: 0 },
@@ -30,13 +26,9 @@ export default function AnimatedSection({
 
   return (
     <motion.div
-      ref={ref}
       initial={{ opacity: 0, x, y }}
-      animate={
-        isInView
-          ? { opacity: 1, x: 0, y: 0 }
-          : { opacity: 0, x, y }
-      }
+      whileInView={{ opacity: 1, x: 0, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
       transition={{
         duration: 0.5,
         delay,

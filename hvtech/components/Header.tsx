@@ -23,16 +23,22 @@ export default function Header() {
 
         <nav className="hidden items-center gap-6 text-sm md:flex">
           <a
-            href="#apresentacao"
+            href="/#apresentacao"
             className="rounded-full px-3 py-1 text-[#E0E1DD]/80 transition-all duration-200 hover:bg-white/5 hover:text-white"
           >
             Sobre
           </a>
           <a
-            href="#historia"
+            href="/#historia"
             className="rounded-full px-3 py-1 text-[#E0E1DD]/80 transition-all duration-200 hover:bg-white/5 hover:text-white"
           >
             História
+          </a>
+          <a
+            href="/#contato"
+            className="rounded-full px-3 py-1 text-[#E0E1DD]/80 transition-all duration-200 hover:bg-white/5 hover:text-white"
+          >
+            Contato
           </a>
           <a
             href="/projetos"
@@ -60,18 +66,25 @@ export default function Header() {
       {isMenuOpen && (
         <nav className="mt-3 flex flex-col gap-2 border-t border-white/10 pt-3 text-sm md:hidden">
           <a
-            href="#apresentacao"
+            href="/#apresentacao"
             className="rounded-lg px-3 py-2 text-[#E0E1DD]/90 transition-colors duration-200 hover:bg-white/5"
             onClick={() => setIsMenuOpen(false)}
           >
             Sobre
           </a>
           <a
-            href="#historia"
+            href="/#historia"
             className="rounded-lg px-3 py-2 text-[#E0E1DD]/90 transition-colors duration-200 hover:bg-white/5"
             onClick={() => setIsMenuOpen(false)}
           >
             História
+          </a>
+          <a
+            href="/#contato"
+            className="rounded-lg px-3 py-2 text-[#E0E1DD]/90 transition-colors duration-200 hover:bg-white/5"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Contato
           </a>
           <a
             href="/projetos"
