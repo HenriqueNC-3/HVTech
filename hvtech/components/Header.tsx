@@ -44,7 +44,7 @@ export default function Header() {
             href="/projetos"
             className="rounded-full border border-[#00B4D8]/60 px-4 py-1.5 text-[#00B4D8] shadow-sm transition-all duration-200 hover:-translate-y-[1px] hover:border-[#4fd3ff] hover:bg-[#00B4D8]/10 hover:text-[#4fd3ff]"
           >
-            Projetos
+            Serviços
           </a>
         </nav>
 

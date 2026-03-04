@@ -140,7 +140,7 @@ function ServiceBlock({ service }: { service: Service }) {
 
   return (
     <div className="rounded-lg bg-[#1C2541] p-4 shadow-lg sm:p-6 lg:p-8">
-      <h3 className="mb-6 text-center text-3xl font-bold sm:text-4xl">
+      <h3 className="mb-6 text-center text-3xl font-bold sm:text-4xl text-[#00B4D8]">
         {service.title}
       </h3>
       <div className="mb-8 flex justify-center">
@@ -156,7 +156,7 @@ function ServiceBlock({ service }: { service: Service }) {
       </p>
 
       <div>
-        <h4 className="mb-2 text-center text-lg font-semibold sm:text-2xl">
+        <h4 className="mb-2 text-center text-lg font-semibold sm:text-2xl text-[#00B4D8]">
           Cases de Sucesso
         </h4>
         <div className="relative mx-auto max-w-md">
