@@ -1,56 +1,69 @@
 "use client";
 
+import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
-import Logo from "@/components/Logo";
+import { ChevronRight } from "lucide-react"; // Sugestão: use um ícone para dar direção
 
 export default function Hero() {
   return (
     <section
-      className="hero-page relative min-h-[70vh] overflow-hidden px-4 py-16 sm:px-6 sm:py-20 md:py-24"
+      className="relative min-h-[85vh] flex items-center overflow-hidden px-4 py-20 sm:px-6"
       aria-label="Página inicial HVTech"
-      style={{
-        backgroundImage: `linear-gradient(rgba(11, 19, 43, 0.75), rgba(11, 19, 43, 0.75)), url('/thumb_projetos.jpg')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
-      }}
     >
-      <div className="relative mx-auto max-w-5xl">
-        <div className="flex flex-col items-center gap-10 md:flex-row md:items-center md:justify-between md:gap-12">
-          <AnimatedSection className="flex max-w-xl flex-col items-center text-center md:items-start md:text-left">
-            <p className="mb-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-[#00B4D8] sm:text-sm">
-              HVTECH • TECNOLOGIA E INOVAÇÃO
-            </p>
-            <h1 className="text-3xl font-semibold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
-              Engenharia de tecnologia feita para empresas que não podem parar.
-            </h1>
-            <p className="mt-4 text-base leading-relaxed text-[#E0E1DD] sm:text-lg">
-              A HVTech é uma empresa de tecnologia focada em criar soluções
-              robustas, seguras e escaláveis para quem precisa de resultados
-              reais, e não apenas mais uma ferramenta.
-            </p>
-          </AnimatedSection>
+      {/* Background com Overlay Dinâmico */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `linear-gradient(to bottom, rgba(11, 19, 43, 0.8), rgba(11, 19, 43, 0.95)), url('/thumb_projetos.jpg')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      />
 
-          <AnimatedSection
-            className="flex w-full max-w-sm flex-col items-center md:max-w-md md:items-end"
-            delay={0.2}
-          >
-            <div className="w-full rounded-2xl bg-white/5 p-5 shadow-lg backdrop-blur-sm transition-all duration-300 hover:bg-white/[0.07] hover:shadow-xl">
-              <div className="flex items-center gap-3">
-                <Logo size="md" />
-                <div>
-                  <p className="text-xs text-[#E0E1DD]/80">Apresentação</p>
-                  <p className="text-sm font-semibold text-white">
-                    Plataforma HVTech para negócios modernos
-                  </p>
-                </div>
-              </div>
-              <p className="mt-4 max-w-xs text-xs text-[#E0E1DD]/80">
-                Conectamos pessoas, processos e infraestrutura por meio de
-                tecnologia bem arquitetada, com foco em estabilidade, segurança
-                e crescimento sustentável.
+      {/* Efeito de Luz Difusa para despertar curiosidade visual */}
+      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-[#00B4D8] opacity-10 blur-[120px] rounded-full" />
+
+      <div className="relative z-10 mx-auto max-w-6xl w-full">
+        <div className="max-w-3xl">
+          <AnimatedSection>
+            <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 rounded-full bg-[#00B4D8]/10 border border-[#00B4D8]/20">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00B4D8] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00B4D8]"></span>
+              </span>
+              <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-[#00B4D8] sm:text-xs">
+                Sistemas Ininterruptos • HVTECH 
               </p>
             </div>
+
+            <h1 className="text-4xl font-bold leading-[1.1] text-white sm:text-5xl md:text-6xl lg:text-7xl mb-6">
+              A engenharia invisível por trás das <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00B4D8] to-[#90E0EF]">empresas imparáveis.</span>
+            </h1>
+
+            <p className="max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg mb-10">
+              Não entregamos apenas software. Arquitetamos estabilidade e 
+              segurança para operações que exigem performance absoluta. 
+              Descubra como blindamos o crescimento da sua infraestrutura.
+            </p>
+
+            {/* --- BLOCO DE CTAs --- */}
+            
+            <div className="flex flex-col sm:flex-row gap-4 items-center">
+              <Link href="/#contato">
+              <button className="group relative w-full sm:w-auto px-8 py-4 bg-[#00B4D8] text-[#0B132B] font-bold rounded-lg transition-all hover:bg-[#90E0EF] hover:shadow-[0_0_20px_rgba(0,180,216,0.4)] flex items-center justify-center gap-2">
+                Entre em contato
+                <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
+              </Link>
+              <Link href="/projetos">
+                <button className="w-full sm:w-auto px-8 py-4 bg-transparent border border-white/20 text-white font-medium rounded-lg hover:bg-white/5 hover:border-white/40 transition-all text-center">
+                Ver os serviços
+                </button>
+              </Link>
+            </div>
+            {/* ------------------- */}
+            
           </AnimatedSection>
         </div>
       </div>

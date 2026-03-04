@@ -94,11 +94,12 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="mensagem" className="mb-1 block text-sm font-medium text-[#E0E1DD]">
-          Mensagem
+          Mensagem/Problemática *
         </label>
         <textarea
           id="mensagem"
           name="mensagem"
+          required
           rows={4}
           placeholder="Como podemos ajudar?"
           className="w-full resize-none rounded-lg border border-white/20 bg-white/5 px-4 py-2.5 text-[#E0E1DD] placeholder:text-[#E0E1DD]/50 focus:border-[#00B4D8] focus:outline-none focus:ring-1 focus:ring-[#00B4D8]"

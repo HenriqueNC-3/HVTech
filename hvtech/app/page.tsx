@@ -20,7 +20,7 @@ export default function Home() {
           <div className="mx-auto max-w-5xl">
             <AnimatedSection>
             <h2 className="text-2xl font-semibold text-white sm:text-3xl">
-              Quem é a HVTech
+              O que é a HVTech ?
             </h2>
             <p className="mt-3 text-base leading-relaxed text-[#E0E1DD] sm:text-lg">
               A HVTech nasceu com um propósito simples: traduzir desafios
@@ -225,13 +225,13 @@ export default function Home() {
           id="contato"
           className="border-t border-white/10 bg-[#0B132B] px-4 py-10 sm:px-6 sm:py-12"
         >
-          <div className="mx-auto max-w-5xl">
+          <div className="mx-auto max-w-5xl text-center flex flex-col gap-4 items-center justify-center">
             <AnimatedSection>
               <h2 className="text-2xl font-semibold text-white sm:text-3xl">
-                Contato
+                Entre em Contato
               </h2>
               <p className="mt-3 max-w-xl text-base leading-relaxed text-[#E0E1DD] sm:text-lg">
-                Envie sua mensagem e retornaremos o mais breve possível.
+                Estamos prontos para ajudar você a transformar sua empresa com soluções tecnológicas inovadoras.
               </p>
               <div className="mt-8 max-w-xl">
                 <ContactForm />
