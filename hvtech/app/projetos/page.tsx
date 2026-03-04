@@ -168,7 +168,7 @@ function ServiceBlock({ service }: { service: Service }) {
                         className="h-36 w-36 rounded-lg object-cover sm:h-44 sm:w-44 md:h-56 md:w-56"
                       />
                     </div>
-                    <h5 className="mb-2 text-center text-xl font-bold sm:text-2xl">
+                    <h5 className="mb-2 text-center text-lg font-bold sm:text-xl">
                       {service.cases[current].title}
                     </h5>
                     <p className="mb-1 text-center text-xs italic text-[#E0E1DD]/70 sm:text-sm">
@@ -181,14 +181,14 @@ function ServiceBlock({ service }: { service: Service }) {
 
                   <button
                     onClick={prev}
-                    className="absolute left-0 top-1/2 -translate-y-1/2 transform rounded-full bg-[#00B4D8] w-10 h-10 flex items-center justify-center text-[#0B132B] hover:opacity-90"
+                    className="absolute left-0 top-1/2 -translate-y-1/2 transform rounded-full bg-[#00B4D8] w-8 h-8 flex items-center justify-center text-[#0B132B] hover:opacity-90"
                     aria-label="Anterior"
                   >
                     ‹
                   </button>
                   <button
                     onClick={next}
-                    className="absolute right-0 top-1/2 -translate-y-1/2 transform rounded-full bg-[#00B4D8] w-10 h-10 flex items-center justify-center text-[#0B132B] hover:opacity-90"
+                    className="absolute right-0 top-1/2 -translate-y-1/2 transform rounded-full bg-[#00B4D8] w-8 h-8 flex items-center justify-center text-[#0B132B] hover:opacity-90"
                     aria-label="Próximo"
                   >
                     ›
