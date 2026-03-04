@@ -33,7 +33,7 @@ export default function Hero() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00B4D8]"></span>
               </span>
               <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-[#00B4D8] sm:text-xs">
-                Sistemas Ininterruptos • HVTECH 
+                Sistemas Ininterruptos • Bem vindo à HVTECH  
               </p>
             </div>
 
