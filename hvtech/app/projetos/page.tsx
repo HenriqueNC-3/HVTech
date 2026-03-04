@@ -77,7 +77,7 @@ const services: Service[] = [
       {
         title: "Módulo Sensor de Umidade",
         client: "AgroSol",
-        image: "/images (8).jpg",
+        image: "/images (11).jpg",
         summary:
           "Projetamos um módulo compacto que mede umidade e envia dados via LoRa, ou seja usando comunicação sem fio de baixo consumo, para aplicações agrícolas.",
       },
@@ -101,14 +101,14 @@ const services: Service[] = [
       {
         title: "Análise de Torque em Máquina",
         client: "AutoMotores",
-        image: "/images (10).jpg",
+        image: "/images (13).jpg",
         summary:
           "Realizamos auditoria de torque e calibramos equipamentos para reduzir quebras de ferramentas.",
       },
       {
         title: "Suporte 24/7 para Sistema de Controle",
         client: "Distribuidora XYZ",
-        image: "/images (5).jpg",
+        image: "/images (10).jpg",
         summary:
           "Oferecemos atendimento contínuo e correções remotas que diminuíram o tempo médio de resposta em 60%.",
       },

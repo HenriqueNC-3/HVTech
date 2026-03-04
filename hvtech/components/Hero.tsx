@@ -29,20 +29,6 @@ export default function Hero() {
               robustas, seguras e escaláveis para quem precisa de resultados
               reais, e não apenas mais uma ferramenta.
             </p>
-            <div className="mt-8 flex w-full flex-col gap-3 sm:flex-row sm:justify-start">
-              <a
-                href="/projetos"
-                className="inline-flex items-center justify-center rounded-full bg-[#00B4D8] px-6 py-3 text-sm font-semibold text-[#0B132B] shadow-sm transition-all duration-300 hover:scale-105 hover:opacity-90"
-              >
-                Ver projetos da HVTech
-              </a>
-              <a
-                href="#historia"
-                className="inline-flex items-center justify-center rounded-full border border-[#E0E1DD]/40 px-6 py-3 text-sm font-semibold text-[#E0E1DD] transition-all duration-300 hover:scale-105 hover:bg-white/5"
-              >
-                Conhecer nossa história
-              </a>
-            </div>
           </AnimatedSection>
 
           <AnimatedSection
