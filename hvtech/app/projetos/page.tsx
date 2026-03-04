@@ -140,23 +140,23 @@ function ServiceBlock({ service }: { service: Service }) {
 
   return (
     <div className="rounded-lg bg-[#1C2541] p-4 shadow-lg sm:p-6 lg:p-8">
-      <h3 className="mb-2 text-center text-2xl font-bold sm:text-3xl">
+      <h3 className="mb-6 text-center text-3xl font-bold sm:text-4xl">
         {service.title}
       </h3>
-      <div className="mb-4 flex justify-center">
+      <div className="mb-8 flex justify-center">
         <img
           src={service.image}
           alt={service.title}
           className="h-48 w-48 rounded-lg object-cover sm:h-56 sm:w-56 md:h-72 md:w-72"
         />
       </div>
-      <p className="mb-2 text-sm sm:text-base">{service.description}</p>
-      <p className="mb-4 text-lg font-medium">
+      <p className="mb-6 text-sm sm:text-lg">{service.description}</p>
+      <p className="mb-4 text-sm italic sm:text-lg">
         Ticket médio: {service.averageTicket}
       </p>
 
       <div>
-        <h4 className="mb-2 text-center text-lg font-semibold sm:text-xl">
+        <h4 className="mb-2 text-center text-lg font-semibold sm:text-2xl">
           Cases de Sucesso
         </h4>
         <div className="relative mx-auto max-w-md">
@@ -236,14 +236,10 @@ export default function Projects() {
       <section className="px-4 py-8 sm:px-6 md:px-8">
         <div className="mb-12">
           <h2 className="mb-4 text-2xl font-semibold sm:text-3xl">
-            Esses são os serviços no qual trabalhamos, com o objetivo de entregar
-            soluções tecnológicas eficientes.
+          O ecossistema de soluções para operações de alta qualidade.
           </h2>
           <p className="mb-8 text-sm leading-relaxed sm:text-base md:text-lg">
-            Na HV Tech, oferecemos projetos personalizados que unem experiência
-            técnica e inovação, sempre garantindo qualidade e eficiência pelo
-            menor preço. Abaixo você encontra um resumo dos nossos serviços
-            e alguns de nossos melhores cases de sucesso.
+          Na HVTech, transformamos desafios complexos em sistemas de alta performance. Nossos projetos de engenharia e automação são desenhados sob medida para garantir que sua operação alcance o máximo de eficiência com o uso inteligente de recursos. Explore nossa estrutura de serviços e veja como nossas soluções entregam estabilidade técnica e viabilidade financeira para o seu negócio. 
           </p>
           <div className="space-y-8">
             {services.map((s, i) => {
