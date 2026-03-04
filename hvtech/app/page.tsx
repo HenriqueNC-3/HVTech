@@ -75,6 +75,91 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Serviços */}
+        <section
+          id="servicos"
+          className="border-t border-white/10 bg-[#0B132B] px-4 py-10 sm:px-6 sm:py-12"
+        >
+          <div className="mx-auto max-w-5xl">
+            <AnimatedSection>
+              <h2 className="text-2xl font-semibold text-white sm:text-3xl">
+                Nossos Serviços
+              </h2>
+              <p className="mt-3 text-base leading-relaxed text-[#E0E1DD] sm:text-lg">
+                Oferecemos soluções completas de engenharia de software para transformar sua visão em realidade.
+              </p>
+              
+              <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <AnimatedSection delay={0.1}>
+                  <div className="flex flex-col rounded-xl bg-white/5 p-6 transition-all duration-300 hover:bg-white/8 hover:scale-[1.02]">
+                    <h3 className="text-lg font-semibold text-[#00B4D8]">
+                      Plataformas Digitais
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-[#E0E1DD]">
+                      Desenvolvemos aplicações web e mobile escaláveis, seguras e com excelente experiência do usuário.
+                    </p>
+                  </div>
+                </AnimatedSection>
+
+                <AnimatedSection delay={0.2}>
+                  <div className="flex flex-col rounded-xl bg-white/5 p-6 transition-all duration-300 hover:bg-white/8 hover:scale-[1.02]">
+                    <h3 className="text-lg font-semibold text-[#00B4D8]">
+                      APIs e Integrações
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-[#E0E1DD]">
+                      Criamos APIs robustas e integramos sistemas heterogêneos para uma comunicação fluida entre plataformas.
+                    </p>
+                  </div>
+                </AnimatedSection>
+
+                <AnimatedSection delay={0.3}>
+                  <div className="flex flex-col rounded-xl bg-white/5 p-6 transition-all duration-300 hover:bg-white/8 hover:scale-[1.02]">
+                    <h3 className="text-lg font-semibold text-[#00B4D8]">
+                      Infraestrutura e DevOps
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-[#E0E1DD]">
+                      Estruturamos ambientes cloud, automação, observabilidade e CI/CD para máxima confiabilidade.
+                    </p>
+                  </div>
+                </AnimatedSection>
+
+                <AnimatedSection delay={0.4}>
+                  <div className="flex flex-col rounded-xl bg-white/5 p-6 transition-all duration-300 hover:bg-white/8 hover:scale-[1.02]">
+                    <h3 className="text-lg font-semibold text-[#00B4D8]">
+                      Modernização de Legado
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-[#E0E1DD]">
+                      Transformamos sistemas antigos em arquiteturas modernas, mantendo continuidade operacional.
+                    </p>
+                  </div>
+                </AnimatedSection>
+
+                <AnimatedSection delay={0.5}>
+                  <div className="flex flex-col rounded-xl bg-white/5 p-6 transition-all duration-300 hover:bg-white/8 hover:scale-[1.02]">
+                    <h3 className="text-lg font-semibold text-[#00B4D8]">
+                      Automação
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-[#E0E1DD]">
+                      Eliminamos processos manuais repetitivos através de robótica e automação inteligente.
+                    </p>
+                  </div>
+                </AnimatedSection>
+
+                <AnimatedSection delay={0.6}>
+                  <div className="flex flex-col rounded-xl bg-white/5 p-6 transition-all duration-300 hover:bg-white/8 hover:scale-[1.02]">
+                    <h3 className="text-lg font-semibold text-[#00B4D8]">
+                      Consultoria Técnica
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-[#E0E1DD]">
+                      Orientamos times na escolha de tecnologias e arquiteturas mais adequadas para seus objetivos.
+                    </p>
+                  </div>
+                </AnimatedSection>
+              </div>
+            </AnimatedSection>
+          </div>
+        </section>
+
         {/* História da empresa – narrativa em formato de linha do tempo simples */}
         <section
           id="historia"
