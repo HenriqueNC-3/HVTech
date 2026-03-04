@@ -91,7 +91,7 @@ export default function Header() {
             className="rounded-lg px-3 py-2 text-[#00B4D8] transition-colors duration-200 hover:bg-[#00B4D8]/10"
             onClick={() => setIsMenuOpen(false)}
           >
-            Projetos
+            Serviços
           </a>
         </nav>
       )}
