@@ -20,7 +20,7 @@ export default function Logo({ className = "", size = "md" }: LogoProps) {
       style={{ width: s, height: s }}
     >
       <Image
-        src="/1000308380.png"
+        src="/Gemini_Generated_Image_f7v1rof7v1rof7v1-removebg-preview.png"
         alt="Logo HVTech"
         width={1000}
         height={s}

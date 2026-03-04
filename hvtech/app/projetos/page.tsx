@@ -229,8 +229,8 @@ export default function Projects() {
           <p className="mb-8 text-sm leading-relaxed sm:text-base md:text-lg">
             Na HV Tech, oferecemos projetos personalizados que unem experiência
             técnica e inovação, sempre garantindo qualidade e eficiência pelo
-            menor preço. Abaixo você encontra um resumo dos nossos principais
-            serviços e alguns de nossos melhores cases de sucesso.
+            menor preço. Abaixo você encontra um resumo dos nossos serviços
+            e alguns de nossos melhores cases de sucesso.
           </p>
           <div className="space-y-8">
             {services.map((s, i) => {
