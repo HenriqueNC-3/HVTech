@@ -151,9 +151,6 @@ function ServiceBlock({ service }: { service: Service }) {
         />
       </div>
       <p className="mb-6 text-sm sm:text-lg">{service.description}</p>
-      <p className="mb-4 text-sm italic sm:text-lg">
-        Ticket médio: {service.averageTicket}
-      </p>
 
       <div>
         <h4 className="mb-2 text-center text-lg font-semibold sm:text-2xl text-[#00B4D8]">
